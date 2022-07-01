@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prefeitura De Cachoeirinha</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="java.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.js"></script>
+        <title>Prefeitura de Cachoeirinha</title>
+        <link rel="shortcut icon" href="./img/logo-cachoeirinha.png" type="image/x-icon" >
+    </head>
+    <body>
+        <header>
+            <!-- MENU SITE -->
+            <div>
+            <img id="logo" src="img/logo_prefeitura.png">
+            </div>
+    
+            <div>
+                <a id="nome_logo">Prefeitura De Cachoeirinha</a>
+            </div>
+    
+            <nav id="nav">
+                <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
+                <span id="hamburguer"></span>
+                 </button>
+    
+            <div>         
+                    <ul id="menu" role="menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="historia.html">História</a></li>
+                    <li><a href="Eventos.html">Eventos</a></li>
+                    <li><a href="jogos.html">Jogos</a></li>
+                    <li><a href="contato.html">Contatos</a></li>
+                </ul>
+            </div>
+            </nav>
+        </header>
+        <section id="Contatos">
+            <BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+            <center>
+                <p class="supertext"><font color="black">Seu e-mail será enviado para prototipo.cach@historiacachoeirinha.com!</font></p>
+            </center>
+            <div class="everything">
+                <div class="camposescrita">
+                    <form action="#">
+                        <div class="row">
+                            <div class="col-6 col-s-12">
+                                <fieldset>
+                                    <legend class="forms"><h3>Suas informações</h3></legend>           
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <label class="rotulo" id="txtnm"><h2>Nome:</h2></label>
+                                            <input type="text" id="txtNome" name="nome" placeholder="Informe o seu nome" maxlenght="20" required autofocus class="caixa-texto">
+                                            <label class="rotulo" id="txtnmail"><h2>E-mail:</h2></label>
+                                            <input type="email" id="txtmail" name="email" placeholder="Seu e-mail: " maxlenght="20" required autofocus class="caixa-texto">
+                                            <label class="rotulo" id="txtmsgm"><h2>Mensagem:</h2></label>
+                                            <textarea style="resize: none" class="caixa-mensagem" maxlength="2000" type="text" id="txtmsg" name="texto" placeholder="Qual é sua dúvida ou sugestão?"></textarea>
+                                        </div>
+                                    </div>
+                                </fieldset>   
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <BR><BR>
+                <div class="send_mail">
+                    <a ><h3 onclick = "alerta()" id="send_text">Enviar</h3></a> 
+                </div>
+                <br> <Br>
+                    <div class="mail-msg">
+                            <img src="img/email.png" width="246px" height="218px" class="imagem-mail">
+                        <div class="text-mail-msg">
+                <br> <br> <br> <br>
+                            <p id="fonte-mail"><font color="black">Lembre-se que sua opinião é muito importante para nós!</font></p>
+                            <p id="fonte-mail2"><font color="black">Fique a vontade para enviar um formulário à nossa equipe.</font></p>
+                        </div>
+                    </div>  
+        </section> 
+           <!-- PARTE FINAL -->
+<br> 
+
+<footer>      
+    <div class="footer">
+    <div class="">
+        <p class="footer_body">
+<br>            
+            <hr width="30%">   
+        <a href="index.html">Inicio </a> |
+        <a href="historia.html">História</a> |
+        <a href="Eventos.html">Destaques</a> |
+        <a href="jogos.html">Jogos</a> |
+        <a href="contato.html">Contato</a> |
+        </p>
+            <hr width="30%">
+            
+    <div>
+        <p class="endereco">
+        <a>Brasil, Rio Grande Do Sul</a>
+        </p>
+    </div>
+    </div>
+<br>       
+        </footer>
+    </body>
+</html>
+
+
+
+
+

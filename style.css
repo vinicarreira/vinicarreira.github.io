@@ -1,0 +1,644 @@
+/* MENU DO SITE */
+
+/* Ficar grudados no canto esquerdo */
+body, ul {                  
+    margin: 0px;
+    padding: 0px;     
+    font-family: arial;
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+/* Quando passar por cima do topico, criar um preto clarinho ao fundo */
+a:hover {                   
+    background: rgba(0, 0, 0, 0.05);
+}
+
+#logo {
+    width: 65px;
+    position: right;
+    top: -90px;
+    margin-right: 40px;
+}
+
+#nome_logo {
+    width: 70px;
+    text-align: left;
+    margin: -365px;
+}
+
+header {
+    box-sizing: border-box; /* height + padding */
+    height: 80px;
+    padding: 1rem; /* 1 rem = 16 px */
+    display: flex; /* Itens ficar um do lado do outro */
+    align-items: center;
+    justify-content: space-between;
+    background: #598EE5;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+}
+
+#menu a {
+    display: block;
+    padding: 0.5rem;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+/*  Linha de comando em que muda a tela de acordo com o tamanho dela - mobile */
+
+@media (max-width: 600px) {
+    #btn-mobile {
+        display: block;
+    }
+    #menu {
+        /* display: none; */
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background: #cfe2ff;
+        transition: 0.6s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #nav.active #menu {
+        height: calc(100vh - 70px); /* vh = viewport, ou seja em toda a tela */
+        visibility: visible;
+        overflow-y: auto;
+    }
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgb(156, 156, 156);
+
+    }
+    #btn-mobile {
+        display: flex;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 0.5rem;
+    }
+    #hamburguer::after,
+    #hamburguer::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: white;
+        margin-top: 5px;
+        transition: 0.3s;
+        position: relative;
+    }
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+    #nav.active #hamburguer::before {
+    transform: rotate(135deg);
+    }
+    #nav.active #hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
+
+/* CONTEUDO DO SITE */
+
+/*  INDEX - HISTORIA */
+
+#imagem_fundo_inicio {
+    background-image: url(img/parcao-cachoeirinha.jpeg);
+    height: 580px;  
+    text-align: center;    
+    background-size: cover;
+    padding-top: 5%;
+    width: 100%;
+}
+
+#imagem_fundo_historia {
+    background-image: url(img/foto_antiga.jpeg);
+    height: 580px;  
+    text-align: center;    
+    background-size: cover;
+    padding-top: 5%;
+    width: 100%;
+}
+
+#centralizado {
+    text-align: center;
+}
+
+#imagem_noticia {
+    margin-top: 70px;
+    margin-left: 30px;
+    max-width: 30%;
+}
+
+#imagem_noticia2 {
+    margin-top: 70px;
+    margin-left: 30px;
+    max-width: 40%;
+}
+
+#imagem_noticia3 {
+    margin-top: 70px;
+    margin-left: 30px;
+    max-width: 30%;
+}
+
+#titulo_noticia {
+    color: #598EE5;
+    margin-top: -203px;
+    margin-left: 340px;
+}
+
+#texto_noticia {
+    color: black;
+    margin-top: 18px;
+    margin-left: 340px;
+    margin-right: 40px;
+}
+
+#titulo_noticia2 {
+    color: #598EE5;
+    margin-top: -230px;
+    margin-left: 180px;
+}
+
+#texto_noticia2 {
+    color: black;
+    margin-top: 18px;
+    margin-left: 180px;
+    margin-right: 40px;
+}
+
+.textosTh{
+    padding-left: 20%;
+}
+
+#link {
+    color: #598EE5;
+    font-size: 15px;
+}
+
+
+/* CONTATO */
+
+#color_black {
+    color: black;
+    text-align: center;
+}
+
+#fundocontato {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    float: left;
+    padding-right: 87%;
+    text-align: center;
+    font-size: larger;
+}
+
+#email {
+    margin-top: 50px;
+    margin-left: 40px;
+    width: 216px;
+    height: 188px;
+}
+
+#emailtexto {
+    margin-top: 60px; 
+    margin-left: 40px;
+    float: left;
+    text-shadow: 1px 1px  black;
+ }
+ 
+ #abaemail {
+    background-color: #92AFDD;
+ }
+
+ #li_contato {
+    position: relative;
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+    margin-top: 30px;
+    margin-right: 20px;
+    float: right;
+    padding: 30px 10px 30px 10px;
+    font-size: large;
+}
+
+li, a {
+    text-decoration: none;
+}
+
+li:before {
+    display: inline-block;
+    position: absolute;
+    left: -1em;
+    color:white;
+}
+
+li:hover {
+    background-color: #598EE5;
+    margin-right: 10px;
+}
+
+ .lupaprefeitura {
+    float: right;
+}
+
+#logoetexto {
+    display: flex;
+}
+
+.forms{
+    margin-left: 34%;
+    color: rgb(53, 53, 53);
+    font-size: large;
+}
+
+fieldset {
+    margin-top: 60px;
+    margin-left: 20%;
+    width: 50%;
+    border: 2px solid #FFFF;
+    background-color: #FFFF;
+    border-radius: 3px;
+    font-size: 14px;
+    background-color: #92AFDD;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+legend {
+    padding: 5px;
+}
+
+.rotulo {
+    margin-left: 20px;
+    font-size: large;
+    margin-top: 40px;
+    color: white;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.caixa-texto {
+    margin-left: 20px;
+    margin-top: 15px;
+    color: Black;
+    font-size: 14px;
+    border-radius: 3px;
+    padding: 6px 9px;
+    border: 1px solid white;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 90%;
+}
+
+.caixa-texto:hover {
+    border: 1px solid white;
+    box-shadow: 0 0 4px color black;
+}
+
+.caixa-mensagem {
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 15px;
+    color: black;
+    font-size: 14px;
+    border-radius: 3px;
+    padding: 10px 9px 300px;
+    border: 1px solid white;
+    background-color: white;
+    width: 90%;
+}
+
+#fonte-mail {
+    padding-top: 55%;
+    text-align: center;
+    padding-right: 23%;
+    padding-left: 10%;
+}
+
+#fonte-mail2 {
+    text-align: center;
+    padding-right: 23%;
+    padding-left: 10%;
+}
+
+.imagem-mail {
+    margin-left: 8px;
+    float: left;
+}
+
+.mail-msg {
+    margin-left: 33.9%;
+    margin-top: 10px;
+}
+
+.text-mail-msg {
+    margin-right: 60%;
+}
+
+.supertext {
+    color: white;
+}
+
+.everything {
+    margin-left: 10%;
+}
+
+#send_text {
+    color: black;
+    
+    margin-left: 43%;
+    cursor: pointer;
+}
+
+/* FUNDO DO SITE */
+
+.footer_body {
+    text-align: center;
+    font-size: 16px;
+}
+
+.footer_left {
+    text-align: center;
+    position: center;
+    float: center;
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #598EE5;
+    color: white;
+    text-align: center;
+}
+
+.endereco {
+    text-align: center;
+    font-size: 16px;
+    position: center;
+}
+
+/* ICONES */
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .fa:hover {
+    opacity: 0.5;
+  }
+ 
+  .fa {
+    font-size: 25px;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+
+  /*thailon*/
+
+.icone{
+    width: 100%;
+    height: 50%;
+    border-radius: 10%;
+}
+.estrela{
+    width: 10%;
+}
+.selecao{
+    margin-top: 3%;
+    display: flex;
+}
+.selecao h3{
+    text-align: center;
+}
+.gratis{
+    font-size: 20px;
+    color: rgb(20, 245, 20);
+}
+.juncao{
+    display: inline-flex;
+}
+.nota{
+    margin-top: 1.5%;
+    margin-left: 1.5%;
+}
+.local1{
+    margin-left: 20%;
+    width: 250px;
+}
+.local1 a {
+    text-decoration: none;
+    color: black;
+}
+.local2{
+    margin-left: 10%;
+    width: 250px;
+}
+.local2 a {
+    text-decoration: none;
+    color: black;
+}
+.local3{
+    margin-left: 10%;
+    width: 250px;
+}
+.local3 a {
+    text-decoration: none;
+    color: black;
+}
+
+.linha-baixo nav{
+    padding: 3%;
+}
+
+.linha-baixo nav li{
+    margin-left: 1%;
+    display:inline-block;
+}
+
+.linha-baixo nav li a{
+    color: white;
+    text-decoration: none;
+}
+
+.opcoes{
+    display: flex;
+}
+
+.topicosex{
+    margin: 3%;
+    width: 100%;
+}
+
+.container{
+    margin: 3%;
+    margin-right: 10%;
+
+}
+.label{
+    margin-right: 13%;
+    margin-bottom: 3%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.icones-rs{
+    margin-top: 5%;
+    margin-right: 37%;
+}
+
+.icone-rs{
+    width: 8%;
+}
+
+#email{
+    border-radius: 6px;
+    border: 2px solid white;
+    padding: 10px 14px;
+    background: white;
+}
+
+.btn{
+    flex: 0 0 auto;
+    border: 2px solid white;
+    border-radius: 6px;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 8px 12px;
+    background: transparent;
+    cursor: pointer;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-left: 25px;
+}
+
+.filtros{
+    display: flex;
+    padding: 2%;
+    border-bottom: 1px solid #969FAA;
+    background-color: #c2c2c2;
+}
+
+.acao{
+    width: 90%;
+    display: flex;
+}
+
+.btn-filt{
+    border: 2px solid white;
+    border-radius: 6px;
+    padding: 8px 12px;
+    background: transparent;
+    cursor: pointer;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+    margin-left: 25px;
+}
+
+.btn-filt:hover{
+    background-color:#969FAA;
+}
+
+.btn-filtro img{
+    width: 10%;
+}
+
+.btn-filt a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Jeffersom Bueno - Jogos */
+
+#maps1 {
+    margin-right: 200px;
+}
+
+
+#maps2 {
+    margin-right: 200px;
+}
+
+
+#maps3 {
+    margin-right: 200px;
+}
+
+.gmap_canvas {
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: 2px 2px 8px black;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+.texto {
+    display: flex;
+}
+
+.geo {
+    margin-left: 150px;
+    margin-top: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.direita {
+    margin-left: 10%;
+    margin-top: 100px;
+    line-height: 35px;
+}
+
+.imgJogo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    
+   
+}
+
+.imgJogo1 img {
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: 2px 2px 8px black;
+    width: 400px;
+    height: 200px;
+    
+    
+}
